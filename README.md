@@ -1,37 +1,34 @@
 # MAMO Americas supply tracker
 
-Public living tracker for **Yu-Gi-Oh! Magnificent Monsters** Americas tuck-box print, from observable sell-through.
+Public living tracker for **Yu-Gi-Oh! Magnificent Monsters** Americas tuck boxes.
 
-**Dashboard (GitHub Pages):** https://mastersquidwardo-blip.github.io/mamo-supply-tracker/
+**Dashboard:** https://mastersquidwardo-blip.github.io/mamo-supply-tracker/  
+**Sister serial tracker:** https://mastersquidwardo-blip.github.io/mamo/
 
-## Plain-English layers
+## Layers (plain English)
 
-| Name | Meaning |
-|---|---|
-| **Proven sold** | Evidence only (Target + TCGPlayer + Amazon marketplace) |
-| **Estimated sold** | Main number — fills gaps we can’t see |
-| **Estimated print** | Sold + stock still in the channel |
+1. **Proven sold** — Target badge + TCGPlayer + Amazon marketplace  
+2. **Estimated sold (visible)** — main online-evidence number  
+3. **Hidden doors** — Walmart / GameStop / Best Buy / in-store ratios as **labeled guesses**  
+4. **Estimated print** — sold + still in channel  
+5. **GMR bridge** — confirmed Americas serials → implied boxes opened (± tolerance)
 
-Amazon marketplace sales **count**, with a **3–5% overlap cushion** for rare flippers — not a rule that marketplace = double count.
-
-## Quick start (CLI)
+## CLI
 
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
+python3 -m venv .venv && source .venv/bin/activate
 pip install -e ".[dev]"
 mamo-tracker compute data/snapshots/snapshot_2026-09-11.json
+mamo-tracker holistic data/snapshots/snapshot_2026-09-11.json --confirmed-americas 27
 pytest
 ```
-
-## Grand Master Rare
-
-Americas lock = **1,800** serials. At ~220k print that is ~**1 per 122 boxes**, not 1-in-881. See [GMR check](docs/GMR-CHECK.md).
 
 ## Docs
 
 - [Scope](docs/SCOPE.md)
 - [Formula](docs/FORMULA.md)
-- [Guardrails](docs/GUARDRAILS.md)
+- [Hidden channels](docs/HIDDEN-CHANNELS.md)
+- [GMR bridge](docs/GMR-BRIDGE.md)
+- [GMR check](docs/GMR-CHECK.md)
 
 Not affiliated with Konami.

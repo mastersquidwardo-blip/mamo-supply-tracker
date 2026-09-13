@@ -39,20 +39,78 @@
     "us_print": 193697
   },
   "notes": [
-    "Proven sold is evidence only \u2014 not a guess.",
-    "Estimated sold is the main dashboard number.",
-    "Amazon marketplace sales count; we only shave 3\u20135% for rare flipper overlap.",
-    "Walmart and GameStop have no usable sold counts \u2014 left blank.",
-    "TCGPlayer 3-month sold mixes presale and street.",
-    "Weekly demand forecast needs more Friday snapshots \u2014 do not annualize week 1.",
-    "Grand Master Rare: Americas lock is 1,800 serials (~1 per 122 boxes at 220k print). Public listings fit that; no counted opening ledger yet \u2014 GMR cell stays empty."
+    "Proven sold is evidence only.",
+    "Estimated sold (visible) is the main online-evidence number.",
+    "Hidden doors (Walmart / GameStop / Best Buy / in-store) are labeled guesses with online-vs-store ratios.",
+    "Best Buy treated as in-store heavy (30% online share default).",
+    "GMR bridge uses 27 confirmed Americas serials from the serial tracker (as of Sep 6) with a 15\u201340% public-report band.",
+    "GMR bridge estimates boxes opened, not sealed sold.",
+    "Cross-link: https://mastersquidwardo-blip.github.io/mamo/"
   ],
   "gmr": {
     "americas_lock": 1800,
-    "implied_boxes_per_gmr_at_estimated_print": 122.3,
-    "myth_one_in": 881,
-    "myth_implies_print_boxes": 1585800,
-    "openings_logged": false,
-    "status": "empty \u2014 waiting on counted openings"
+    "confirmed_americas_serials": 27,
+    "public_report_share_mid": 0.25,
+    "implied_pulled_mid": 108.0,
+    "boxes_per_gmr_at_print": 269.20454545454544,
+    "implied_boxes_opened_mid": 29074.090909090908,
+    "implied_boxes_opened_low": 18171.306818181816,
+    "implied_boxes_opened_high": 48456.81818181818,
+    "status": "bridge from confirmed serials \u2014 not a full opening ledger",
+    "note": "Uses confirmed Americas serial identities from the serial tracker. Bands boxes opened, not boxes sold. Europe E-serials excluded."
+  },
+  "serial_tracker": {
+    "url": "https://mastersquidwardo-blip.github.io/mamo/",
+    "repo": "https://github.com/mastersquidwardo-blip/mamo",
+    "as_of": "2026-09-06",
+    "confirmed_americas_serials": 27,
+    "confirmed_e_serials": 13
+  },
+  "hidden_channels": {
+    "label": "Labeled guesses \u2014 not proven sold",
+    "target_online": 62000.0,
+    "target_total_with_instore": 112727.27272727272,
+    "doors": [
+      {
+        "name": "Walmart",
+        "total": 84545.45454545454,
+        "online": 38045.454545454544,
+        "in_store": 46500.0,
+        "vs_target": 0.75,
+        "online_share": 0.45,
+        "note": "No sold badge; mid prior vs Target"
+      },
+      {
+        "name": "GameStop",
+        "total": 16909.090909090908,
+        "online": 5918.181818181817,
+        "in_store": 10990.909090909092,
+        "vs_target": 0.15,
+        "online_share": 0.35,
+        "note": "Smaller door count; no usable sold count"
+      },
+      {
+        "name": "Best Buy",
+        "total": 28181.81818181818,
+        "online": 8454.545454545454,
+        "in_store": 19727.272727272728,
+        "vs_target": 0.25,
+        "online_share": 0.3,
+        "note": "In-store heavy; online often thin / not first-party verified"
+      }
+    ],
+    "other_mass": 11272.727272727272,
+    "hidden_mass_total": 191636.36363636362,
+    "defaults": {
+      "target_online_share": "55%",
+      "walmart_vs_target": "75%",
+      "gamestop_vs_target": "15%",
+      "best_buy_vs_target": "25%",
+      "best_buy_online_share": "30% (in-store heavy)"
+    }
+  },
+  "results_with_hidden": {
+    "estimated_sold": 421363.63636363635,
+    "estimated_print": 484568.18181818177
   }
 }

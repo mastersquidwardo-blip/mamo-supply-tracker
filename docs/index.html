@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>MAMO Americas Supply Tracker</title>
-  <meta name="description" content="Living Americas print estimate for Yu-Gi-Oh! Magnificent Monsters from observable sell-through." />
+  <meta name="description" content="Living Americas print estimate for Yu-Gi-Oh! Magnificent Monsters from sell-through, hidden doors, and confirmed GMR serials." />
   <link rel="stylesheet" href="site/styles.css" />
 </head>
 <body>
@@ -12,58 +12,107 @@
     <div class="wrap">
       <p class="eyebrow">Yu-Gi-Oh! · Magnificent Monsters (MAMO)</p>
       <h1>Americas supply tracker</h1>
-      <p class="lede">How many tuck boxes look printed for the Americas — from what we can see selling. Main number = <strong>estimated sold</strong>, not print.</p>
+      <p class="lede">Boxes we can prove online, then labeled guesses for stores we cannot see, then a bridge from confirmed Grand Master Rare serials. Main visible number = <strong>estimated sold</strong>.</p>
     </div>
   </header>
 
   <main class="wrap">
-    <section id="hero-cards" class="cards" aria-live="polite">
+    <h2 class="section-label">Visible evidence only</h2>
+    <section class="cards" aria-live="polite">
       <article class="card">
         <h2>Proven sold</h2>
         <p class="big" id="proven">—</p>
-        <p class="hint">What evidence already shows. Not a guess.</p>
+        <p class="hint">Target + TCGPlayer + Amazon marketplace</p>
       </article>
       <article class="card primary">
         <h2>Estimated sold</h2>
         <p class="big" id="sold">—</p>
-        <p class="hint" id="sold-band">Main dashboard number</p>
+        <p class="hint" id="sold-band">Main online-evidence number</p>
       </article>
       <article class="card">
         <h2>Estimated print</h2>
         <p class="big" id="print">—</p>
-        <p class="hint" id="print-band">Sold + still sitting in the channel</p>
+        <p class="hint" id="print-band">Sold + still in channel</p>
+      </article>
+    </section>
+
+    <h2 class="section-label">With hidden doors folded in <span class="tag">guesses</span></h2>
+    <section class="cards">
+      <article class="card warn">
+        <h2>Estimated sold (incl. hidden)</h2>
+        <p class="big" id="sold-hidden">—</p>
+        <p class="hint">Adds Walmart / GameStop / Best Buy / in-store priors</p>
+      </article>
+      <article class="card warn">
+        <h2>Estimated print (incl. hidden)</h2>
+        <p class="big" id="print-hidden">—</p>
+        <p class="hint">Same print math on the bigger sold base</p>
       </article>
     </section>
 
     <p class="meta" id="meta"></p>
 
     <section class="panel">
-      <h2>Where the boxes came from</h2>
+      <h2>Where the visible boxes came from</h2>
       <div class="table-wrap">
         <table>
-          <thead>
-            <tr><th>Source</th><th>Boxes</th><th>Role</th></tr>
-          </thead>
+          <thead><tr><th>Source</th><th>Boxes</th><th>Role</th></tr></thead>
           <tbody id="sources"></tbody>
         </table>
       </div>
     </section>
 
     <section class="panel">
-      <h2>How we get from “seen” to “sold” to “print”</h2>
+      <h2>Hidden doors (labeled guesses)</h2>
+      <p class="fine">Walmart, GameStop, and Best Buy often have no sold badge. Best Buy especially moves product <strong>in store</strong>. We assign each door a size vs Target and an online share so in-store “invisible” boxes can be estimated. These are knobs, not facts.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Door</th><th>Boxes</th><th>Split</th></tr></thead>
+          <tbody id="hidden-doors"></tbody>
+        </table>
+      </div>
+      <p><a href="HIDDEN-CHANNELS.md">How hidden channels work →</a></p>
+    </section>
+
+    <section class="panel">
+      <h2>Grand Master Rare bridge</h2>
+      <p>From the serial tracker’s confirmed Americas identities (not Europe <code>E</code> serials):</p>
+      <div class="cards tight">
+        <article class="card">
+          <h2>Confirmed Americas serials</h2>
+          <p class="big" id="gmr-confirmed">—</p>
+        </article>
+        <article class="card">
+          <h2>Implied boxes opened</h2>
+          <p class="big" id="gmr-opened">—</p>
+          <p class="hint" id="gmr-band"></p>
+        </article>
+      </div>
+      <p class="fine" id="gmr-rate"></p>
+      <p class="fine">This bands <strong>opens</strong>, not sealed sold. Cross-check only — do not average into print if it disagrees by more than 2×.</p>
+      <p>
+        <a href="GMR-BRIDGE.md">Bridge method →</a> ·
+        <a href="GMR-CHECK.md">Full GMR write-up →</a> ·
+        <a href="https://mastersquidwardo-blip.github.io/mamo/">Serial tracker →</a>
+      </p>
+    </section>
+
+    <section class="panel">
+      <h2>How the layers fit</h2>
       <ol class="steps">
-        <li><strong>Proven sold</strong> = first-party mass we measured + TCGPlayer sealed + Amazon marketplace “bought” badges.</li>
-        <li><strong>Estimated sold</strong> = stretch mass a bit for missed doors, stretch TCGPlayer for the rest of hobby, keep marketplace almost as-is (only a 3–5% overlap cushion).</li>
-        <li><strong>Estimated print</strong> = estimated sold + about 15% still unsold in stores / warehouses (first month).</li>
+        <li><strong>Proven sold</strong> — online evidence only.</li>
+        <li><strong>Estimated sold (visible)</strong> — stretch Target/TCGPlayer for gaps we still believe are online/hobby.</li>
+        <li><strong>Hidden doors</strong> — Walmart / GameStop / Best Buy / in-store ratios as labeled guesses.</li>
+        <li><strong>Estimated print</strong> — sold + stock still in the channel.</li>
+        <li><strong>GMR bridge</strong> — confirmed serials → implied boxes opened (± public-report tolerance).</li>
       </ol>
-      <p class="fine">We do <em>not</em> treat Amazon marketplace as automatic double-counting with TCGPlayer. At ~$35 retail / ~$42 market, flipping usually loses money after fees. The small cushion is for rare anomalies only.</p>
     </section>
 
     <section class="panel">
       <h2>Knobs (plain names)</h2>
       <div class="table-wrap">
         <table>
-          <thead><tr><th>Knob</th><th>Default</th><th>Band</th></tr></thead>
+          <thead><tr><th>Knob</th><th>Default</th><th>Band / note</th></tr></thead>
           <tbody id="knobs"></tbody>
         </table>
       </div>
@@ -74,23 +123,17 @@
       <ul id="notes"></ul>
     </section>
 
-
-    <section class="panel">
-      <h2>Grand Master Rare check</h2>
-      <p>This site estimates <strong>boxes sold and printed</strong>. It is not yet a census of serial pulls.</p>
-      <p class="fine">Konami locked Americas Grand Master Rares at <strong>1,800</strong> (18 names × 100). If estimated print (~220k) is right, that is about <strong>1 GMR per 122 tuck boxes</strong> — not the “1 in 881” story (that needs ~1.6M boxes of print).</p>
-      <p class="fine">A few five-figure eBay hits plus lots of dead air in filmed openings is what 1-in-122 looks like when only a sliver of opens get posted. Public listings do <em>not</em> by themselves blow up 220k.</p>
-      <p class="fine"><strong>Still missing:</strong> a counted opening ledger (boxes opened vs GMRs found). Until that exists, the GMR cell stays empty — we will not invent it or average it into the box math.</p>
-      <p><a href="GMR-CHECK.md">Full plain-English write-up →</a></p>
-    </section>
-
     <section class="panel links">
       <h2>Docs</h2>
       <ul>
         <li><a href="SCOPE.md">Full scope</a></li>
         <li><a href="FORMULA.md">Formula in plain English</a></li>
+        <li><a href="HIDDEN-CHANNELS.md">Hidden channels</a></li>
+        <li><a href="GMR-BRIDGE.md">GMR serial bridge</a></li>
+        <li><a href="GMR-CHECK.md">Grand Master Rare check</a></li>
         <li><a href="GUARDRAILS.md">Guardrails</a></li>
-        <li><a href="https://github.com/mastersquidwardo-blip/mamo-supply-tracker">GitHub repo</a></li>
+        <li><a href="https://github.com/mastersquidwardo-blip/mamo-supply-tracker">Supply repo</a></li>
+        <li><a href="https://github.com/mastersquidwardo-blip/mamo">Serial repo</a></li>
       </ul>
     </section>
   </main>
