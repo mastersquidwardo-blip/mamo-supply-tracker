@@ -1,0 +1,23 @@
+{
+  "date": "2026-09-11",
+  "m_obs": 62000,
+  "tcg_boxes": 2900,
+  "tcg_displays": 2539,
+  "a3p_box_bought": 2000,
+  "a3p_display_bought": 200,
+  "confidence": "medium",
+  "notes": [
+    "Target 1P 62k+ bought last month, sold out @ $34.99 (floor)",
+    "TCGPlayer 3-mo Total Sold mixes presale + street",
+    "Amazon A1P=0; A3P badges 2K+ box + 200+ display treated as floors 2000 / 200",
+    "Walmart and GameStop unknown — not invented",
+    "A3P counted with ρ=0.04 reseller-overlap haircut; not stretched by 1/h",
+    "GMR openings insufficient"
+  ],
+  "amazon": {
+    "a1p": 0,
+    "box_asin": "B0HBSNDH6Z",
+    "display_asin": "B0HD85WX2J",
+    "checked": "2026-09-13"
+  }
+}
