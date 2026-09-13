@@ -1,0 +1,58 @@
+:root {
+  --bg: #0f1419;
+  --panel: #1a222c;
+  --text: #e8eef4;
+  --muted: #9aa8b5;
+  --accent: #f0b429;
+  --line: #2a3542;
+  --ok: #3ecf8e;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: radial-gradient(1200px 600px at 20% -10%, #1c2a3a, var(--bg));
+  color: var(--text);
+  line-height: 1.5;
+}
+.wrap { width: min(960px, 92vw); margin: 0 auto; }
+.top { padding: 2.5rem 0 1rem; border-bottom: 1px solid var(--line); }
+.eyebrow { color: var(--accent); text-transform: uppercase; letter-spacing: .08em; font-size: .75rem; margin: 0 0 .4rem; }
+h1 { font-size: clamp(1.6rem, 4vw, 2.2rem); margin: 0 0 .6rem; }
+.lede { color: var(--muted); max-width: 40rem; margin: 0; }
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0 1rem;
+}
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1.1rem 1.2rem;
+}
+.card.primary { border-color: var(--accent); box-shadow: 0 0 0 1px rgba(240,180,41,.25); }
+.card h2 { font-size: .9rem; margin: 0; color: var(--muted); font-weight: 600; }
+.big { font-size: 1.85rem; font-weight: 700; margin: .35rem 0; letter-spacing: -0.02em; }
+.hint { margin: 0; color: var(--muted); font-size: .85rem; }
+.meta { color: var(--muted); font-size: .9rem; margin: 0 0 1.5rem; }
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1.2rem 1.3rem;
+  margin-bottom: 1rem;
+}
+.panel h2 { margin: 0 0 .8rem; font-size: 1.05rem; }
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+th, td { text-align: left; padding: .55rem .4rem; border-bottom: 1px solid var(--line); }
+th { color: var(--muted); font-weight: 600; }
+.steps { margin: 0; padding-left: 1.2rem; }
+.steps li { margin-bottom: .55rem; }
+.fine { color: var(--muted); font-size: .9rem; }
+.links ul, #notes { margin: 0; padding-left: 1.2rem; }
+.links a { color: var(--accent); }
+.foot { padding: 1.5rem 0 2.5rem; color: var(--muted); font-size: .85rem; }
+.blank { color: var(--muted); font-style: italic; }

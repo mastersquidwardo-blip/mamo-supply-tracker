@@ -1,0 +1,50 @@
+{
+  "title": "Magnificent Monsters — Americas supply tracker",
+  "set_code": "MAMO",
+  "unit": "tuck box",
+  "street_date": "2026-09-04",
+  "snapshot_date": "2026-09-11",
+  "days_since_street": 7,
+  "confidence": "medium",
+  "msrp": 34.99,
+  "tcgplayer_box_market": 42.63,
+  "inputs": {
+    "mass_first_party": 62000,
+    "mass_label": "Target first-party (62k+ bought, sold out @ $34.99)",
+    "tcgplayer_boxes": 2900,
+    "tcgplayer_displays": 2539,
+    "amazon_marketplace_boxes": 2000,
+    "amazon_marketplace_displays": 200,
+    "amazon_first_party": 0,
+    "walmart": null,
+    "gamestop": null
+  },
+  "knobs": {
+    "mass_coverage": 1.2,
+    "tcgplayer_hobby_share": 0.25,
+    "marketplace_overlap_cushion": 0.04,
+    "unsold_in_channel": 0.15,
+    "us_share_of_americas": 0.88
+  },
+  "results": {
+    "tcgplayer_boxes_seen": 28290,
+    "amazon_marketplace_boxes_seen": 4000,
+    "proven_sold": 94290,
+    "estimated_sold": 191400,
+    "estimated_sold_low": 169400,
+    "estimated_sold_high": 222830,
+    "estimated_print": 220110,
+    "estimated_print_low": 194810,
+    "estimated_print_high": 256254,
+    "us_print": 193697
+  },
+  "notes": [
+    "Proven sold is evidence only — not a guess.",
+    "Estimated sold is the main dashboard number.",
+    "Amazon marketplace sales count; we only shave 3–5% for rare flipper overlap.",
+    "Walmart and GameStop have no usable sold counts — left blank.",
+    "TCGPlayer 3-month sold mixes presale and street.",
+    "No Grand Master Rare openings logged yet for a cross-check.",
+    "Weekly demand forecast needs more Friday snapshots — do not annualize week 1."
+  ]
+}

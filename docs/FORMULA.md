@@ -1,44 +1,39 @@
-# MAMO model v2.1
+# Formula (plain English)
 
-Three layers. Do not mash sold, unobserved sold, and in-channel inventory into one multiplier.
-
-## Layer 1 — Observed floor
+## Proven sold (floor)
 
 ```
-H_tcgp = TCGP_boxes + TCGP_displays × 10
-A3P_raw = A3P_box_bought + A3P_display_bought × 10
-H_vis = H_tcgp + A3P_raw
-S_floor = M_obs + H_vis
+TCGPlayer boxes = TCGPlayer box solds + (TCGPlayer display solds × 10)
+Amazon marketplace boxes = marketplace box “bought” + (marketplace display “bought” × 10)
+Proven sold = mass first-party + TCGPlayer boxes + Amazon marketplace boxes
 ```
 
-Unknown doors stay unknown (omit), not zero-filled.
+Unknown doors (Walmart, GameStop with no numbers) stay **blank**, not zero.
 
-## Layer 2 — Estimated sold (dashboard primary)
-
-```
-A3P_adj = A3P_raw × (1 − ρ)
-S_est = (M_obs × C_M) + (H_tcgp / h) + A3P_adj
-```
-
-**Stretch only TCGP by `1/h`.** Amazon 3P is already an observed channel, so it is not expanded again.
-
-### Why A3P counts
-Distinct completed checkouts on Amazon 3P vs TCGPlayer are distinct transactions. At ~$35 MSRP / ~$42 market, flipping TCGP→Amazon after fees/tax/shipping is generally not viable. Reseller overlap is treated as a **3–5% anomaly** (`ρ`), not a rule that “3P = double count.”
-
-## Layer 3 — Estimated print
+## Estimated sold (main number)
 
 ```
-P_est = S_est × (1 + u)
-P_US = P_est × 0.88
+Marketplace after overlap cushion = Amazon marketplace boxes × (1 − 0.04)
+Estimated sold =
+    (mass first-party × 1.20)
+  + (TCGPlayer boxes ÷ 0.25)
+  + Marketplace after overlap cushion
 ```
 
-`u` is estimated unsold / in-channel relative to cumulative sold (weakest knob).
+| Plain knob | Default | Band | Meaning |
+|---|---|---|---|
+| Mass coverage | 1.20 | 1.15–1.25 | Missed first-party doors |
+| TCGPlayer share of remaining hobby | 25% | 20–30% | Only stretches TCGPlayer |
+| Marketplace overlap cushion | 4% | 3–5% | Rare flipper double-ticks |
+| Unsold still in channel | 15% | — | Used for print, not for “sold” |
 
-## Defaults
+## Estimated print
 
-| Knob | Default | Band |
-|------|---------|------|
-| C_M | 1.20 | 1.15–1.25 |
-| h | 0.25 | 0.20–0.30 |
-| u | 0.15 | — |
-| ρ | 0.04 | 0.03–0.05 |
+```
+Estimated print = Estimated sold × 1.15
+US print ≈ Estimated print × 0.88
+```
+
+## Why marketplace sales count
+
+A finished Amazon marketplace checkout is a different sale from a TCGPlayer checkout. At ~$35 retail and ~$42 market, flipping between them after fees usually loses money. We still leave a **3–5% cushion** for weird flipper cases — not a rule that marketplace never counts.

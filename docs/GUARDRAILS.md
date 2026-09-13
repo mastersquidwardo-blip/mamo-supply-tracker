@@ -1,11 +1,12 @@
-# Guardrails
+# Guardrails (simple)
 
-- Unit = tuck box. Americas only. No EU / Cardmarket.
-- Count Amazon 3P bought badges in A3P; count Amazon 1P in M_obs.
-- Do **not** stretch A3P by `1/h`.
-- Do **not** invent Walmart or GameStop sold counts.
-- Do **not** count eBay / Whatnot / singles.
-- Do **not** double-count TCGP displays and the boxes inside them.
-- Do **not** annualize a launch-week spike into a year.
-- GMR (`1800 / p`) is an independent check — never average blindly with sell-through if they differ by >2×.
-- Dashboard primary = **S_est** (estimated sold), not print.
+1. Count **boxes**, not displays (convert displays ×10).  
+2. Americas only — no Europe.  
+3. First-party mass only for Target / Walmart / Amazon.com / GameStop.  
+4. Amazon **marketplace** sold badges **do** count (with a 3–5% overlap cushion).  
+5. Don’t stretch marketplace the same way as TCGPlayer.  
+6. Don’t invent Walmart or GameStop numbers.  
+7. Don’t add eBay / Whatnot on top of TCGPlayer.  
+8. Don’t turn a launch-week spike into a full-year forecast.  
+9. Grand Master Rare math is a separate check — don’t average it blindly with sell-through.  
+10. Main number on the dashboard = **Estimated sold**, not print.

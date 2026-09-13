@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MAMO Americas Supply Tracker</title>
+  <meta name="description" content="Living Americas print estimate for Yu-Gi-Oh! Magnificent Monsters from observable sell-through." />
+  <link rel="stylesheet" href="site/styles.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <p class="eyebrow">Yu-Gi-Oh! · Magnificent Monsters (MAMO)</p>
+      <h1>Americas supply tracker</h1>
+      <p class="lede">How many tuck boxes look printed for the Americas — from what we can see selling. Main number = <strong>estimated sold</strong>, not print.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="hero-cards" class="cards" aria-live="polite">
+      <article class="card">
+        <h2>Proven sold</h2>
+        <p class="big" id="proven">—</p>
+        <p class="hint">What evidence already shows. Not a guess.</p>
+      </article>
+      <article class="card primary">
+        <h2>Estimated sold</h2>
+        <p class="big" id="sold">—</p>
+        <p class="hint" id="sold-band">Main dashboard number</p>
+      </article>
+      <article class="card">
+        <h2>Estimated print</h2>
+        <p class="big" id="print">—</p>
+        <p class="hint" id="print-band">Sold + still sitting in the channel</p>
+      </article>
+    </section>
+
+    <p class="meta" id="meta"></p>
+
+    <section class="panel">
+      <h2>Where the boxes came from</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Source</th><th>Boxes</th><th>Role</th></tr>
+          </thead>
+          <tbody id="sources"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>How we get from “seen” to “sold” to “print”</h2>
+      <ol class="steps">
+        <li><strong>Proven sold</strong> = first-party mass we measured + TCGPlayer sealed + Amazon marketplace “bought” badges.</li>
+        <li><strong>Estimated sold</strong> = stretch mass a bit for missed doors, stretch TCGPlayer for the rest of hobby, keep marketplace almost as-is (only a 3–5% overlap cushion).</li>
+        <li><strong>Estimated print</strong> = estimated sold + about 15% still unsold in stores / warehouses (first month).</li>
+      </ol>
+      <p class="fine">We do <em>not</em> treat Amazon marketplace as automatic double-counting with TCGPlayer. At ~$35 retail / ~$42 market, flipping usually loses money after fees. The small cushion is for rare anomalies only.</p>
+    </section>
+
+    <section class="panel">
+      <h2>Knobs (plain names)</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Knob</th><th>Default</th><th>Band</th></tr></thead>
+          <tbody id="knobs"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Still open</h2>
+      <ul id="notes"></ul>
+    </section>
+
+    <section class="panel links">
+      <h2>Docs</h2>
+      <ul>
+        <li><a href="SCOPE.md">Full scope</a></li>
+        <li><a href="FORMULA.md">Formula in plain English</a></li>
+        <li><a href="GUARDRAILS.md">Guardrails</a></li>
+        <li><a href="https://github.com/mastersquidwardo-blip/mamo-supply-tracker">GitHub repo</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    <p>Living tracker · updates from dated snapshots · not affiliated with Konami.</p>
+  </footer>
+  <script src="site/app.js"></script>
+</body>
+</html>

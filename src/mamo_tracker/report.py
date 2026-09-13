@@ -1,4 +1,4 @@
-"""Format the three-layer dashboard."""
+"""Format the three-layer dashboard in plain English."""
 
 from __future__ import annotations
 
@@ -13,29 +13,33 @@ def format_dashboard(r: LayerResult) -> str:
     p = r.params
     i = r.inputs
     lines = [
-        "MAMO MODEL v2.1 — Americas sealed boxes",
+        "MAMO Americas supply tracker",
         f"Snapshot date: {i.date}",
         f"Confidence:    {i.confidence}",
         "",
-        "LAYER 1  Observed floor S_floor",
-        f"  M_obs (1P mass):     {_n(i.m_obs)}",
-        f"  H_tcgp:              {_n(r.H_tcgp)}",
-        f"  A3P_raw:             {_n(r.A3P_raw)}",
-        f"  S_floor:             {_n(r.S_floor)}+",
+        "PROVEN SOLD (floor — not a guess)",
+        f"  Mass first-party:           {_n(i.m_obs)}",
+        f"  TCGPlayer boxes seen:       {_n(r.H_tcgp)}",
+        f"  Amazon marketplace seen:    {_n(r.A3P_raw)}",
+        f"  Proven sold:                {_n(r.S_floor)}+",
         "",
-        "LAYER 2  Estimated sold S_est  ← dashboard primary",
-        f"  A3P_adj (ρ={p.rho:.2f}): {_n(r.A3P_adj)}",
-        f"  S_est:               {_n(r.S_est)}",
-        f"  Sold band:           {_n(r.S_est_low)} – {_n(r.S_est_high)}",
+        "ESTIMATED SOLD  ← main dashboard number",
+        f"  Marketplace after {p.rho*100:.0f}% cushion: {_n(r.A3P_adj)}",
+        f"  Estimated sold:             {_n(r.S_est)}",
+        f"  Sold band:                  {_n(r.S_est_low)} – {_n(r.S_est_high)}",
         "",
-        "LAYER 3  Estimated print P_est",
-        f"  P_est (u={p.u:.2f}):     {_n(r.P_est)}",
-        f"  Print band:          {_n(r.P_est_low)} – {_n(r.P_est_high)}",
-        f"  US print (×{p.us_share}): {_n(r.P_US)}",
+        "ESTIMATED PRINT",
+        f"  Unsold still in channel:    {p.u*100:.0f}%",
+        f"  Estimated print:            {_n(r.P_est)}",
+        f"  Print band:                 {_n(r.P_est_low)} – {_n(r.P_est_high)}",
+        f"  US print:                   {_n(r.P_US)}",
         "",
-        "Knobs: "
-        f"C_M={p.C_M}  h={p.h}  u={p.u}  ρ={p.rho}",
-        "Note: A3P is NOT stretched by 1/h; only TCGP is.",
+        "Knobs (plain): "
+        f"mass coverage={p.C_M}, "
+        f"TCGPlayer hobby share={p.h}, "
+        f"unsold in channel={p.u}, "
+        f"marketplace overlap cushion={p.rho}",
+        "Note: marketplace is NOT stretched like TCGPlayer; only TCGPlayer uses ÷ hobby share.",
     ]
     if i.notes:
         lines.append("")

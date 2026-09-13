@@ -1,32 +1,33 @@
-# mamo-supply-tracker
+# MAMO Americas supply tracker
 
-Americas **Magnificent Monsters (MAMO)** sealed-box sell-through → print tracker.
+Public living tracker for **Yu-Gi-Oh! Magnificent Monsters** Americas tuck-box print, from observable sell-through.
 
-Implements **model v2.1**:
+**Dashboard (GitHub Pages):** https://mastersquidwardo-blip.github.io/mamo-supply-tracker/
 
-1. **Observed floor** `S_floor` — evidence only (Target 1P + TCGPlayer + Amazon 3P bought)
-2. **Estimated sold** `S_est` — dashboard primary
-3. **Estimated print** `P_est` — sold × in-channel unsold factor
+## Plain-English layers
 
-Amazon 3P **counts**, with a small reseller-overlap haircut `ρ` (3–5%). TCGPlayer is still stretched by `1/h`; A3P is **not**.
+| Name | Meaning |
+|---|---|
+| **Proven sold** | Evidence only (Target + TCGPlayer + Amazon marketplace) |
+| **Estimated sold** | Main number — fills gaps we can’t see |
+| **Estimated print** | Sold + stock still in the channel |
 
-## Quick start
+Amazon marketplace sales **count**, with a **3–5% overlap cushion** for rare flippers — not a rule that marketplace = double count.
+
+## Quick start (CLI)
 
 ```bash
-python -m pip install -e ".[dev]"
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -e ".[dev]"
 mamo-tracker compute data/snapshots/snapshot_2026-09-11.json
-mamo-tracker sensitivity data/snapshots/snapshot_2026-09-11.json
 pytest
 ```
 
-## Seed snapshot (2026-09-11)
+## Docs
 
-| Input | Value |
-|-------|-------|
-| Target 1P | 62,000+ |
-| TCGP boxes | 2,900 |
-| TCGP displays | 2,539 (= 25,390 boxes) |
-| Amazon 3P | 2,000 + 200×10 = 4,000 (badge floors) |
-| Amazon 1P / WMT / GS | 0 / unknown / unknown |
+- [Scope](docs/SCOPE.md)
+- [Formula](docs/FORMULA.md)
+- [Guardrails](docs/GUARDRAILS.md)
 
-See [docs/FORMULA.md](docs/FORMULA.md) and [docs/GUARDRAILS.md](docs/GUARDRAILS.md).
+Not affiliated with Konami.
