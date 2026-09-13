@@ -56,6 +56,12 @@ async function boot() {
     li.textContent = n;
     notes.appendChild(li);
   }
+  if (d.gmr) {
+    const li = document.createElement("li");
+    li.innerHTML = `<strong>Grand Master Rare:</strong> Americas lock ${d.gmr.americas_lock.toLocaleString("en-US")}. At this print estimate ≈ 1 per ${d.gmr.implied_boxes_per_gmr_at_estimated_print} boxes. Status: ${d.gmr.status}.`;
+    notes.appendChild(li);
+  }
+
 }
 
 boot().catch((err) => {

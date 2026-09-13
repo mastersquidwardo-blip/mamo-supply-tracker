@@ -24,6 +24,10 @@ mamo-tracker compute data/snapshots/snapshot_2026-09-11.json
 pytest
 ```
 
+## Grand Master Rare
+
+Americas lock = **1,800** serials. At ~220k print that is ~**1 per 122 boxes**, not 1-in-881. See [GMR check](docs/GMR-CHECK.md).
+
 ## Docs
 
 - [Scope](docs/SCOPE.md)

@@ -1,5 +1,5 @@
 {
-  "title": "Magnificent Monsters — Americas supply tracker",
+  "title": "Magnificent Monsters \u2014 Americas supply tracker",
   "set_code": "MAMO",
   "unit": "tuck box",
   "street_date": "2026-09-04",
@@ -39,12 +39,20 @@
     "us_print": 193697
   },
   "notes": [
-    "Proven sold is evidence only — not a guess.",
+    "Proven sold is evidence only \u2014 not a guess.",
     "Estimated sold is the main dashboard number.",
-    "Amazon marketplace sales count; we only shave 3–5% for rare flipper overlap.",
-    "Walmart and GameStop have no usable sold counts — left blank.",
+    "Amazon marketplace sales count; we only shave 3\u20135% for rare flipper overlap.",
+    "Walmart and GameStop have no usable sold counts \u2014 left blank.",
     "TCGPlayer 3-month sold mixes presale and street.",
-    "No Grand Master Rare openings logged yet for a cross-check.",
-    "Weekly demand forecast needs more Friday snapshots — do not annualize week 1."
-  ]
+    "Weekly demand forecast needs more Friday snapshots \u2014 do not annualize week 1.",
+    "Grand Master Rare: Americas lock is 1,800 serials (~1 per 122 boxes at 220k print). Public listings fit that; no counted opening ledger yet \u2014 GMR cell stays empty."
+  ],
+  "gmr": {
+    "americas_lock": 1800,
+    "implied_boxes_per_gmr_at_estimated_print": 122.3,
+    "myth_one_in": 881,
+    "myth_implies_print_boxes": 1585800,
+    "openings_logged": false,
+    "status": "empty \u2014 waiting on counted openings"
+  }
 }
