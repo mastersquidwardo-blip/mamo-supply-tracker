@@ -67,11 +67,11 @@
     "url": "https://mastersquidwardo-blip.github.io/mamo/",
     "repo": "https://github.com/mastersquidwardo-blip/mamo",
     "as_of": "2026-09-14",
-    "commit": "ec795aa",
+    "commit": "75864ea",
     "confirmed_americas_serials": 42,
     "confirmed_e_serials": 18,
     "confirmed_total": 60,
-    "note": "Censored serials treated iffy (recirc risk); title-stated eBay folded",
+    "note": "Photo-pass: Gagaga 079 reverted (was 019); DM 060 promoted. Net Americas still 42.",
     "iffy": 17,
     "off_market_mid": 109.0
   },
