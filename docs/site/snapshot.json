@@ -33,10 +33,10 @@
     "estimated_sold": 191400,
     "estimated_sold_low": 169400,
     "estimated_sold_high": 222830,
-    "estimated_print": 450000,
-    "estimated_print_low": 400000,
-    "estimated_print_high": 485000,
-    "us_print": 396000,
+    "estimated_print": 485000,
+    "estimated_print_low": 420000,
+    "estimated_print_high": 520000,
+    "us_print": 426800,
     "estimated_print_online_only": 220110,
     "estimated_print_online_only_low": 194810,
     "estimated_print_online_only_high": 256254,
@@ -58,13 +58,13 @@
     "public_report_share_mid": 0.25,
     "implied_pulled_mid": 168.0,
     "off_market_mid": 109.0,
-    "boxes_per_gmr_at_450k": 250.0,
-    "boxes_per_gmr_at_print": 269.20454545454544,
-    "implied_boxes_opened_mid_450k": 42000.0,
-    "implied_boxes_opened_mid": 45226.346666666665,
-    "implied_boxes_opened_low": 28266.466666666667,
-    "implied_boxes_opened_high": 75377.24444444444,
-    "working_print_round": 450000,
+    "boxes_per_gmr_at_450k": 269.44444444444446,
+    "boxes_per_gmr_at_print": 269.44444444444446,
+    "implied_boxes_opened_mid_450k": null,
+    "implied_boxes_opened_mid": 45266.66666666667,
+    "implied_boxes_opened_low": 28291.666666666668,
+    "implied_boxes_opened_high": 75444.44444444445,
+    "working_print_round": 485000,
     "status": "bridge from confirmed Americas serials \u2014 censored kept iffy",
     "note": "Uses confirmed Americas serial identities from the serial tracker. Bands boxes opened, not boxes sold. Europe E-serials excluded."
   },
@@ -129,10 +129,12 @@
     "note": "Full hidden-door rebuild (~421k sold / ~485k print); headline print rounded to 450k"
   },
   "working_print": {
-    "americas": 450000,
-    "label": "Working Americas print (hidden doors / ~1 GMR per 250 boxes)",
-    "us_approx": 396000,
-    "boxes_per_gmr": 250,
-    "basis": "1,800 Americas serials \u00d7 ~250 boxes; aligned with hidden-door rebuild (~485k rounded to 450k)"
+    "americas": 485000,
+    "americas_display": 485000,
+    "label": "Hidden-door Americas print (normalized)",
+    "us_approx": 426420,
+    "boxes_per_gmr": 269.4,
+    "basis": "Full hidden-door rebuild: Target in-store lift + Walmart/GameStop/Best Buy priors + unsold factor",
+    "americas_exact": 484568
   }
 }

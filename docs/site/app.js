@@ -30,7 +30,7 @@ async function boot() {
   const printHeadline = wp.americas != null ? wp.americas : r.estimated_print;
   document.getElementById("print").textContent = "~" + fmt(printHeadline);
   document.getElementById("print-band").textContent =
-    `Working print · ~1 GMR per ${fmt(wp.boxes_per_gmr || 250)} boxes · US ~${fmt(wp.us_approx || r.us_print)}`;
+    `~1 GMR per ${fmt(wp.boxes_per_gmr || 269)} boxes · US ~${fmt(wp.us_approx || r.us_print)}`;
 
   const onlineOnly = r.estimated_print_online_only;
   const note = document.getElementById("online-only-note");
@@ -96,12 +96,12 @@ async function boot() {
 
   if (g) {
     document.getElementById("gmr-confirmed").textContent = fmt(g.confirmed_americas_serials);
-    const opened = g.implied_boxes_opened_mid_450k != null ? g.implied_boxes_opened_mid_450k : g.implied_boxes_opened_mid;
+    const opened = g.implied_boxes_opened_mid;
     document.getElementById("gmr-opened").textContent = fmt(opened);
     document.getElementById("gmr-band").textContent =
       `Band ${fmt(g.implied_boxes_opened_low)} – ${fmt(g.implied_boxes_opened_high)} (if ${Math.round((g.public_report_share_mid || 0.25) * 100)}% of pulls go public; boxes opened, not sealed sold)`;
     document.getElementById("gmr-rate").textContent =
-      `≈ 1 GMR per ${fmt(wp.boxes_per_gmr || g.boxes_per_gmr_at_450k || 250)} boxes at the ~450k working print`;
+    `≈ 1 GMR per ${fmt(wp.boxes_per_gmr || 269)} boxes at the ~485k working print`;
   }
 
   const notes = document.getElementById("notes");
