@@ -63,3 +63,34 @@ th { color: var(--muted); font-weight: 600; }
 .cards.tight { margin-top: .8rem; }
 
 .online-only { color: var(--muted); font-size: .85rem; margin: -.2rem 0 1.2rem; }
+
+.top.compact { padding: 1rem 0 0.2rem; border-bottom: none; }
+.supply-title {
+  font-size: clamp(1.35rem, 3.5vw, 1.85rem);
+  letter-spacing: 0.04em;
+  margin: 0.6rem 0 1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.card.print-hero {
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px rgba(240,180,41,.3);
+}
+.card.print-hero .box-art {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  background: #000;
+}
+.card.print-hero .print-overlay {
+  padding: 0.85rem 1.1rem 1rem;
+}
+.card.print-hero .big {
+  color: var(--accent);
+}
