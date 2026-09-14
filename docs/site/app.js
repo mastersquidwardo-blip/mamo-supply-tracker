@@ -19,18 +19,33 @@ async function boot() {
   const hid = d.hidden_channels;
   const rh = d.results_with_hidden;
   const g = d.gmr;
+  const wp = d.working_print || {};
 
   document.getElementById("proven").textContent = fmt(r.proven_sold) + "+";
   document.getElementById("sold").textContent = fmt(r.estimated_sold);
-  document.getElementById("print").textContent = fmt(r.estimated_print);
   document.getElementById("sold-band").textContent =
     `Band ${fmt(r.estimated_sold_low)} – ${fmt(r.estimated_sold_high)} · visible evidence only`;
+
+  // Headline print = working ~450k
+  const printHeadline = wp.americas != null ? wp.americas : r.estimated_print;
+  document.getElementById("print").textContent = "~" + fmt(printHeadline);
   document.getElementById("print-band").textContent =
-    `Band ${fmt(r.estimated_print_low)} – ${fmt(r.estimated_print_high)} · US ~${fmt(r.us_print)}`;
+    `Working print · ~1 GMR per ${fmt(wp.boxes_per_gmr || 250)} boxes · US ~${fmt(wp.us_approx || r.us_print)}`;
+
+  const onlineOnly = r.estimated_print_online_only;
+  const note = document.getElementById("online-only-note");
+  if (note && onlineOnly != null) {
+    note.textContent =
+      `Online-only estimated print (no hidden doors): ${fmt(onlineOnly)} ` +
+      `(band ${fmt(r.estimated_print_online_only_low)} – ${fmt(r.estimated_print_online_only_high)}; US ~${fmt(r.us_print_online_only)}). ` +
+      `Kept as a footnote — not the headline.`;
+  }
 
   if (rh) {
-    document.getElementById("sold-hidden").textContent = fmt(rh.estimated_sold);
-    document.getElementById("print-hidden").textContent = fmt(rh.estimated_print);
+    const sh = document.getElementById("sold-hidden");
+    const ph = document.getElementById("print-hidden");
+    if (sh) sh.textContent = fmt(rh.estimated_sold);
+    if (ph) ph.textContent = fmt(rh.estimated_print);
   }
 
   document.getElementById("meta").textContent =
@@ -71,6 +86,7 @@ async function boot() {
     ["Walmart vs Target", hid?.defaults?.walmart_vs_target || "75%", "labeled guess"],
     ["GameStop vs Target", hid?.defaults?.gamestop_vs_target || "15%", "labeled guess"],
     ["Best Buy vs Target", hid?.defaults?.best_buy_vs_target || "25%", "in-store heavy"],
+    ["Working print", "~" + fmt(wp.americas || 450000), "1,800 serials × ~250 boxes"],
   ];
   for (const [name, val, band] of knobRows) {
     const tr = document.createElement("tr");
@@ -80,11 +96,12 @@ async function boot() {
 
   if (g) {
     document.getElementById("gmr-confirmed").textContent = fmt(g.confirmed_americas_serials);
-    document.getElementById("gmr-opened").textContent = fmt(g.implied_boxes_opened_mid);
+    const opened = g.implied_boxes_opened_mid_450k != null ? g.implied_boxes_opened_mid_450k : g.implied_boxes_opened_mid;
+    document.getElementById("gmr-opened").textContent = fmt(opened);
     document.getElementById("gmr-band").textContent =
       `Band ${fmt(g.implied_boxes_opened_low)} – ${fmt(g.implied_boxes_opened_high)} (if ${Math.round((g.public_report_share_mid || 0.25) * 100)}% of pulls go public; boxes opened, not sealed sold)`;
     document.getElementById("gmr-rate").textContent =
-      `≈ 1 GMR per ${fmt(g.boxes_per_gmr_at_print)} boxes at the hidden-doors print estimate`;
+      `≈ 1 GMR per ${fmt(wp.boxes_per_gmr || g.boxes_per_gmr_at_450k || 250)} boxes at the ~450k working print`;
   }
 
   const notes = document.getElementById("notes");

@@ -33,10 +33,15 @@
     "estimated_sold": 191400,
     "estimated_sold_low": 169400,
     "estimated_sold_high": 222830,
-    "estimated_print": 220110,
-    "estimated_print_low": 194810,
-    "estimated_print_high": 256254,
-    "us_print": 193697
+    "estimated_print": 450000,
+    "estimated_print_low": 400000,
+    "estimated_print_high": 485000,
+    "us_print": 396000,
+    "estimated_print_online_only": 220110,
+    "estimated_print_online_only_low": 194810,
+    "estimated_print_online_only_high": 256254,
+    "us_print_online_only": 193697,
+    "print_is_working_headline": true
   },
   "notes": [
     "Proven sold is evidence only.",
@@ -120,6 +125,14 @@
   },
   "results_with_hidden": {
     "estimated_sold": 421363.63636363635,
-    "estimated_print": 484568.18181818177
+    "estimated_print": 484568.18181818177,
+    "note": "Full hidden-door rebuild (~421k sold / ~485k print); headline print rounded to 450k"
+  },
+  "working_print": {
+    "americas": 450000,
+    "label": "Working Americas print (hidden doors / ~1 GMR per 250 boxes)",
+    "us_approx": 396000,
+    "boxes_per_gmr": 250,
+    "basis": "1,800 Americas serials \u00d7 ~250 boxes; aligned with hidden-door rebuild (~485k rounded to 450k)"
   }
 }
