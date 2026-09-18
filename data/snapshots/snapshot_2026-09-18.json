@@ -1,0 +1,182 @@
+{
+  "title": "Magnificent Monsters \u2014 Americas supply tracker",
+  "set_code": "MAMO",
+  "unit": "tuck box",
+  "street_date": "2026-09-04",
+  "snapshot_date": "2026-09-18",
+  "snapshot_local": "2026-09-18 09:41 CDT",
+  "days_since_street": 14,
+  "confidence": "medium",
+  "msrp": 34.99,
+  "tcgplayer_box_market": 41.55,
+  "inputs": {
+    "mass_first_party": 62000,
+    "mass_label": "Target first-party (62k+ last good 2026-09-11; 2026-09-18 refresh human-check blocked)",
+    "tcgplayer_boxes": 2900,
+    "tcgplayer_displays": 2539,
+    "amazon_marketplace_boxes": 2000,
+    "amazon_marketplace_displays": 200,
+    "amazon_first_party": 0,
+    "walmart": null,
+    "gamestop": null
+  },
+  "refresh_status": {
+    "target": "human_check_blocked",
+    "tcgplayer": "total_sold_unreliable",
+    "amazon_box": "ok",
+    "amazon_display": "ok",
+    "walmart_proven": "blank",
+    "gamestop_proven": "blank",
+    "notes": [
+      "Press-and-hold verification failed 2026-09-18; carrying last good 62k+ from 2026-09-11 user/app evidence. Not invented.",
+      "Browser refresh 2026-09-18 showed Total Sold 0 / empty sales on box+display (product 715291 market $41.55; display 694826 market $397.68). Zeros treated as failed load; carrying 2026-09-11 solds 2900 box / 2539 display.",
+      "Amazon box B0HBSNDH6Z: Kings Games marketplace, $44.75, 2K+ bought past month, New (21) from $45.95.",
+      "Amazon display B0HD85WX2J: BetterShopping4You marketplace, $489.99, 200+ bought past month, New (14) from $489.92.",
+      "Do not annualize; day 14 still early post-street."
+    ]
+  },
+  "knobs": {
+    "mass_coverage": 1.2,
+    "tcgplayer_hobby_share": 0.25,
+    "marketplace_overlap_cushion": 0.04,
+    "unsold_in_channel": 0.15,
+    "us_share_of_americas": 0.88
+  },
+  "results": {
+    "tcgplayer_boxes_seen": 28290,
+    "amazon_marketplace_boxes_seen": 4000,
+    "proven_sold": 94290,
+    "estimated_sold": 191400.0,
+    "estimated_sold_low": 172580.0,
+    "estimated_sold_high": 219650.0,
+    "estimated_print": 485000,
+    "estimated_print_low": 420000,
+    "estimated_print_high": 520000,
+    "us_print": 426800,
+    "estimated_print_online_only": 220110,
+    "estimated_print_online_only_low": 198467,
+    "estimated_print_online_only_high": 252597,
+    "us_print_online_only": 193697,
+    "print_is_working_headline": true
+  },
+  "notes": [
+    "Proven sold is evidence only.",
+    "Estimated sold (visible) is the main online-evidence number.",
+    "Hidden doors (Walmart / GameStop / Best Buy / in-store) are labeled guesses with online-vs-store ratios.",
+    "Best Buy treated as in-store heavy (30% online share default).",
+    "GMR bridge uses 42 confirmed Americas serials from serial tracker (60 public total with 18 E).",
+    "GMR bridge estimates boxes opened, not sealed sold.",
+    "Cross-link: https://mastersquidwardo-blip.github.io/mamo/",
+    "Friday 2026-09-18: Amazon marketplace badges reconfirmed; Target human-check blocked; TCGPlayer Total Sold unreliable \u2014 carried last-good Target/TCGPlayer."
+  ],
+  "gmr": {
+    "americas_lock": 1800,
+    "confirmed_americas_serials": 42,
+    "public_report_share_mid": 0.25,
+    "implied_pulled_mid": 168.0,
+    "off_market_mid": 126.0,
+    "boxes_per_gmr_at_450k": 250.0,
+    "boxes_per_gmr_at_print": 269.44444444444446,
+    "implied_boxes_opened_mid": 45266.66666666667,
+    "implied_boxes_opened_low": 28291.666666666668,
+    "implied_boxes_opened_high": 75444.44444444445,
+    "working_print_round": 485000,
+    "status": "bridge from confirmed Americas serials",
+    "note": "Uses confirmed Americas serial identities from the serial tracker. Bands boxes opened, not boxes sold. Europe E-serials excluded.",
+    "vs_sellthrough_mid_ratio": 0.1074289823804387,
+    "disagree_gt_2x": false,
+    "weak_side": null,
+    "opened_vs_hidden_sold_fraction": 0.1074289823804387,
+    "cross_check_note": "Implied opens ~45,267 are ~11% of hidden estimated sold ~421,364. That gap is expected this early (most stock still sealed). Not treated as a >2\u00d7 print conflict; do not average GMR into print."
+  },
+  "serial_tracker": {
+    "url": "https://mastersquidwardo-blip.github.io/mamo/",
+    "repo": "https://github.com/mastersquidwardo-blip/mamo",
+    "as_of": "2026-09-18",
+    "commit": "75864ea",
+    "confirmed_americas_serials": 42,
+    "confirmed_e_serials": 18,
+    "confirmed_total": 60,
+    "note": "Counted unique Americas pool rows in serials.csv (exclude E). Unchanged vs prior 42."
+  },
+  "hidden_channels": {
+    "label": "Labeled guesses \u2014 not proven sold",
+    "target_online": 62000.0,
+    "target_total_with_instore": 112727.27272727272,
+    "doors": [
+      {
+        "name": "Walmart",
+        "total": 84545.45454545454,
+        "online": 38045.454545454544,
+        "in_store": 46500.0,
+        "vs_target": 0.75,
+        "online_share": 0.45,
+        "note": "No sold badge; mid prior vs Target"
+      },
+      {
+        "name": "GameStop",
+        "total": 16909.090909090908,
+        "online": 5918.181818181817,
+        "in_store": 10990.909090909092,
+        "vs_target": 0.15,
+        "online_share": 0.35,
+        "note": "Smaller door count; no usable sold count"
+      },
+      {
+        "name": "Best Buy",
+        "total": 28181.81818181818,
+        "online": 8454.545454545454,
+        "in_store": 19727.272727272728,
+        "vs_target": 0.25,
+        "online_share": 0.3,
+        "note": "In-store heavy; online often thin / not first-party verified"
+      }
+    ],
+    "other_mass": 11272.727272727272,
+    "hidden_mass_total": 191636.36363636365,
+    "defaults": {
+      "target_online_share": "55%",
+      "walmart_vs_target": "75%",
+      "gamestop_vs_target": "15%",
+      "best_buy_vs_target": "25%",
+      "best_buy_online_share": "30% (in-store heavy)"
+    }
+  },
+  "results_with_hidden": {
+    "estimated_sold": 421363.63636363635,
+    "estimated_print": 484568.18181818177,
+    "note": "Full hidden-door rebuild (~421k sold / ~485k print); headline print rounded to 485k"
+  },
+  "working_print": {
+    "americas": 485000,
+    "americas_display": 485000,
+    "label": "Hidden-door Americas print (normalized)",
+    "us_approx": 426800,
+    "boxes_per_gmr": 269.4,
+    "basis": "Full hidden-door rebuild: Target in-store lift + Walmart/GameStop/Best Buy priors + unsold factor",
+    "americas_exact": 484568.18181818177
+  },
+  "amazon_live": {
+    "box": {
+      "asin": "B0HBSNDH6Z",
+      "a1p": false,
+      "seller": "Kings Games",
+      "price": 44.75,
+      "bought_month": "2K+ bought in past month",
+      "boxes_point": 2000,
+      "other_offers": "New (21) from $45.95",
+      "shot": "/workspace/mamo/shots/2026-09-18-amazon-box.png"
+    },
+    "display": {
+      "asin": "B0HD85WX2J",
+      "a1p": false,
+      "seller": "BetterShopping4You",
+      "price": 489.99,
+      "bought_month": "200+ bought in past month",
+      "displays_point": 200,
+      "boxes_equiv": 2000,
+      "other_offers": "New (14) from $489.92",
+      "shot": "/workspace/mamo/shots/2026-09-18-amazon-display.png"
+    }
+  }
+}
