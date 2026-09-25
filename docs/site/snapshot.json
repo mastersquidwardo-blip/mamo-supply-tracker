@@ -3,15 +3,15 @@
   "set_code": "MAMO",
   "unit": "tuck box",
   "street_date": "2026-09-04",
-  "snapshot_date": "2026-09-18",
-  "snapshot_local": "2026-09-18 09:41 CDT",
-  "days_since_street": 14,
+  "snapshot_date": "2026-09-25",
+  "snapshot_local": "2026-09-25 09:25 CDT",
+  "days_since_street": 21,
   "confidence": "medium",
   "msrp": 34.99,
   "tcgplayer_box_market": 41.55,
   "inputs": {
-    "mass_first_party": 62000,
-    "mass_label": "Target first-party (62k+ last good 2026-09-11; 2026-09-18 refresh human-check blocked)",
+    "mass_first_party": 94000,
+    "mass_label": "Target first-party (94k+ live 2026-09-25; was 62k+ last good 2026-09-11)",
     "tcgplayer_boxes": 2900,
     "tcgplayer_displays": 2539,
     "amazon_marketplace_boxes": 2000,
@@ -21,18 +21,17 @@
     "gamestop": null
   },
   "refresh_status": {
-    "target": "human_check_blocked",
-    "tcgplayer": "total_sold_unreliable",
-    "amazon_box": "ok",
-    "amazon_display": "ok",
+    "target": "ok",
+    "tcgplayer": "uh_oh_blocked",
+    "amazon_box": "pdp_blocked",
+    "amazon_display": "pdp_blocked",
     "walmart_proven": "blank",
     "gamestop_proven": "blank",
     "notes": [
-      "Press-and-hold verification failed 2026-09-18; carrying last good 62k+ from 2026-09-11 user/app evidence. Not invented.",
-      "Browser refresh 2026-09-18 showed Total Sold 0 / empty sales on box+display (product 715291 market $41.55; display 694826 market $397.68). Zeros treated as failed load; carrying 2026-09-11 solds 2900 box / 2539 display.",
-      "Amazon box B0HBSNDH6Z: Kings Games marketplace, $44.75, 2K+ bought past month, New (21) from $45.95.",
-      "Amazon display B0HD85WX2J: BetterShopping4You marketplace, $489.99, 200+ bought past month, New (14) from $489.92.",
-      "Do not annualize; day 14 still early post-street."
+      "Target live 2026-09-25: 94k+ bought in last month @ $34.99; in stock for shipping (Add to cart). Human press-and-hold cleared. Shot: /workspace/mamo/shots/2026-09-25-target.png",
+      "TCGPlayer box 715291 and display 694826 both landed on /uhoh server error 2026-09-25; carrying last-good 2026-09-11 solds 2900 box / 2539 display and 2026-09-18 market $41.55 / $397.68. Not invented.",
+      "Amazon DP B0HBSNDH6Z and B0HD85WX2J rendered category-carousel fallbacks (no buy box / no bought badge) after retries 2026-09-25; carrying last-good 2026-09-18 marketplace 2K+ box / 200+ display (not 1P). Not invented.",
+      "Do not annualize; day 21 post-street."
     ]
   },
   "knobs": {
@@ -45,18 +44,18 @@
   "results": {
     "tcgplayer_boxes_seen": 28290,
     "amazon_marketplace_boxes_seen": 4000,
-    "proven_sold": 94290,
-    "estimated_sold": 191400.0,
-    "estimated_sold_low": 172580.0,
-    "estimated_sold_high": 219650.0,
-    "estimated_print": 485000,
-    "estimated_print_low": 420000,
-    "estimated_print_high": 520000,
-    "us_print": 426800,
-    "estimated_print_online_only": 220110,
-    "estimated_print_online_only_low": 198467,
-    "estimated_print_online_only_high": 252597,
-    "us_print_online_only": 193697,
+    "proven_sold": 126290,
+    "estimated_sold": 229800.0,
+    "estimated_sold_low": 207204.20062695924,
+    "estimated_sold_high": 263717.7115987461,
+    "estimated_print": 665000,
+    "estimated_print_low": 577000,
+    "estimated_print_high": 714000,
+    "us_print": 585200.0,
+    "estimated_print_online_only": 264270.0,
+    "estimated_print_online_only_low": 238284.83072100312,
+    "estimated_print_online_only_high": 303275.36833855795,
+    "us_print_online_only": 232557.6,
     "print_is_working_headline": true
   },
   "notes": [
@@ -67,7 +66,7 @@
     "GMR bridge uses 42 confirmed Americas serials from serial tracker (60 public total with 18 E).",
     "GMR bridge estimates boxes opened, not sealed sold.",
     "Cross-link: https://mastersquidwardo-blip.github.io/mamo/",
-    "Friday 2026-09-18: Amazon marketplace badges reconfirmed; Target human-check blocked; TCGPlayer Total Sold unreliable \u2014 carried last-good Target/TCGPlayer."
+    "Friday 2026-09-25: Target badge stepped 62k+ \u2192 94k+ (live). Amazon PDP blocked; TCGPlayer /uhoh \u2014 carried last-good Amazon/TCGPlayer."
   ],
   "gmr": {
     "americas_lock": 1800,
@@ -76,23 +75,23 @@
     "implied_pulled_mid": 168.0,
     "off_market_mid": 126.0,
     "boxes_per_gmr_at_450k": 250.0,
-    "boxes_per_gmr_at_print": 269.44444444444446,
-    "implied_boxes_opened_mid": 45266.66666666667,
-    "implied_boxes_opened_low": 28291.666666666668,
-    "implied_boxes_opened_high": 75444.44444444445,
-    "working_print_round": 485000,
+    "boxes_per_gmr_at_print": 369.44444444444446,
+    "implied_boxes_opened_mid": 62066.66666666667,
+    "implied_boxes_opened_low": 38791.66666666667,
+    "implied_boxes_opened_high": 103444.44444444445,
+    "working_print_round": 665000,
     "status": "bridge from confirmed Americas serials",
     "note": "Uses confirmed Americas serial identities from the serial tracker. Bands boxes opened, not boxes sold. Europe E-serials excluded.",
-    "vs_sellthrough_mid_ratio": 0.1074289823804387,
+    "vs_sellthrough_mid_ratio": 0.10729739640630731,
     "disagree_gt_2x": false,
     "weak_side": null,
-    "opened_vs_hidden_sold_fraction": 0.1074289823804387,
-    "cross_check_note": "Implied opens ~45,267 are ~11% of hidden estimated sold ~421,364. That gap is expected this early (most stock still sealed). Not treated as a >2\u00d7 print conflict; do not average GMR into print."
+    "opened_vs_hidden_sold_fraction": 0.10729739640630731,
+    "cross_check_note": "Implied opens ~62,067 are ~11% of hidden estimated sold ~578,455. That gap is expected this early (most stock still sealed). Not treated as a >2\u00d7 print conflict; do not average GMR into print."
   },
   "serial_tracker": {
     "url": "https://mastersquidwardo-blip.github.io/mamo/",
     "repo": "https://github.com/mastersquidwardo-blip/mamo",
-    "as_of": "2026-09-18",
+    "as_of": "2026-09-25",
     "commit": "75864ea",
     "confirmed_americas_serials": 42,
     "confirmed_e_serials": 18,
@@ -101,39 +100,39 @@
   },
   "hidden_channels": {
     "label": "Labeled guesses \u2014 not proven sold",
-    "target_online": 62000.0,
-    "target_total_with_instore": 112727.27272727272,
+    "target_online": 94000.0,
+    "target_total_with_instore": 170909.09090909088,
     "doors": [
       {
         "name": "Walmart",
-        "total": 84545.45454545454,
-        "online": 38045.454545454544,
-        "in_store": 46500.0,
+        "total": 128181.81818181816,
+        "online": 57681.81818181818,
+        "in_store": 70500.0,
         "vs_target": 0.75,
         "online_share": 0.45,
         "note": "No sold badge; mid prior vs Target"
       },
       {
         "name": "GameStop",
-        "total": 16909.090909090908,
-        "online": 5918.181818181817,
-        "in_store": 10990.909090909092,
+        "total": 25636.363636363632,
+        "online": 8972.72727272727,
+        "in_store": 16663.63636363636,
         "vs_target": 0.15,
         "online_share": 0.35,
         "note": "Smaller door count; no usable sold count"
       },
       {
         "name": "Best Buy",
-        "total": 28181.81818181818,
-        "online": 8454.545454545454,
-        "in_store": 19727.272727272728,
+        "total": 42727.27272727272,
+        "online": 12818.181818181816,
+        "in_store": 29909.0909090909,
         "vs_target": 0.25,
         "online_share": 0.3,
         "note": "In-store heavy; online often thin / not first-party verified"
       }
     ],
-    "other_mass": 11272.727272727272,
-    "hidden_mass_total": 191636.36363636365,
+    "other_mass": 17090.90909090909,
+    "hidden_mass_total": 290545.4545454545,
     "defaults": {
       "target_online_share": "55%",
       "walmart_vs_target": "75%",
@@ -143,40 +142,51 @@
     }
   },
   "results_with_hidden": {
-    "estimated_sold": 421363.63636363635,
-    "estimated_print": 484568.18181818177,
-    "note": "Full hidden-door rebuild (~421k sold / ~485k print); headline print rounded to 485k"
+    "estimated_sold": 578454.5454545454,
+    "estimated_print": 665222.7272727272,
+    "note": "Full hidden-door rebuild (~578k sold / ~665k print); headline print rounded to 665,000"
   },
   "working_print": {
-    "americas": 485000,
-    "americas_display": 485000,
+    "americas": 665000,
+    "americas_display": 665000,
     "label": "Hidden-door Americas print (normalized)",
-    "us_approx": 426800,
-    "boxes_per_gmr": 269.4,
+    "us_approx": 585200.0,
+    "boxes_per_gmr": 369.4,
     "basis": "Full hidden-door rebuild: Target in-store lift + Walmart/GameStop/Best Buy priors + unsold factor",
-    "americas_exact": 484568.18181818177
+    "americas_exact": 665222.7272727272
   },
   "amazon_live": {
     "box": {
       "asin": "B0HBSNDH6Z",
       "a1p": false,
-      "seller": "Kings Games",
-      "price": 44.75,
-      "bought_month": "2K+ bought in past month",
+      "seller": null,
+      "price": null,
+      "bought_month": "CARRIED 2K+ bought in past month (last good 2026-09-18; PDP blocked 2026-09-25)",
       "boxes_point": 2000,
-      "other_offers": "New (21) from $45.95",
-      "shot": "/workspace/mamo/shots/2026-09-18-amazon-box.png"
+      "other_offers": null,
+      "shot": "/workspace/mamo/shots/2026-09-25-amazon-box.png",
+      "status": "pdp_blocked"
     },
     "display": {
       "asin": "B0HD85WX2J",
       "a1p": false,
-      "seller": "BetterShopping4You",
-      "price": 489.99,
-      "bought_month": "200+ bought in past month",
+      "seller": null,
+      "price": null,
+      "bought_month": "CARRIED 200+ bought in past month (last good 2026-09-18; PDP blocked 2026-09-25)",
       "displays_point": 200,
       "boxes_equiv": 2000,
-      "other_offers": "New (14) from $489.92",
-      "shot": "/workspace/mamo/shots/2026-09-18-amazon-display.png"
+      "other_offers": null,
+      "shot": "/workspace/mamo/shots/2026-09-25-amazon-display.png",
+      "status": "pdp_blocked"
     }
+  },
+  "target_live": {
+    "url": "https://www.target.com/p/konami-yu-gi-oh-magnificent-monsters-box/-/A-1011726453",
+    "price": 34.99,
+    "bought_month": "94k+ bought in last month",
+    "boxes_point": 94000,
+    "availability": "In stock for shipping",
+    "shot": "/workspace/mamo/shots/2026-09-25-target.png",
+    "status": "ok"
   }
 }
