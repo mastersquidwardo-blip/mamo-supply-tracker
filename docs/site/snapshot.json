@@ -3,18 +3,18 @@
   "set_code": "MAMO",
   "unit": "tuck box",
   "street_date": "2026-09-04",
-  "snapshot_date": "2026-10-09",
-  "snapshot_local": "2026-10-09 09:47 CDT",
-  "days_since_street": 35,
+  "snapshot_date": "2026-10-16",
+  "snapshot_local": "2026-10-16 09:25 CDT",
+  "days_since_street": 42,
   "confidence": "medium",
   "msrp": 34.99,
-  "tcgplayer_box_market": 33.6,
-  "tcgplayer_display_market": 339.72,
+  "tcgplayer_box_market": 32.94,
+  "tcgplayer_display_market": 284.95,
   "inputs": {
     "mass_first_party": 94000,
-    "mass_label": "Target first-party (CARRIED 94k+ last good 2026-09-25; PDP unavailable / product not found 2026-10-02 and 2026-10-09)",
-    "tcgplayer_boxes": 6088,
-    "tcgplayer_displays": 3021,
+    "mass_label": "Target first-party (CARRIED 94k+ last good 2026-09-25; PDP unavailable 2026-10-02, 10-09, 10-16; search press-and-hold failed 2026-10-16)",
+    "tcgplayer_boxes": 6496,
+    "tcgplayer_displays": 3074,
     "amazon_marketplace_boxes": 1000,
     "amazon_marketplace_displays": 100,
     "amazon_first_party": 0,
@@ -22,18 +22,19 @@
     "gamestop": null
   },
   "refresh_status": {
-    "target": "pdp_unavailable",
+    "target": "pdp_unavailable_search_blocked",
     "tcgplayer": "ok",
-    "amazon_box": "ok",
-    "amazon_display": "ok",
+    "amazon_box": "blocked_carried",
+    "amazon_display": "blocked_carried",
     "walmart_proven": "blank",
     "gamestop_proven": "blank",
     "notes": [
-      "Target 2026-10-09: PDP A-1011726453 still \"Item not available\" / product not found; no price, no bought badge. Carrying last-good 94k+ from 2026-09-25. Shot: /workspace/mamo/shots/2026-10-09-target.png",
-      "TCGPlayer live 2026-10-09: box 715291 Total Sold 6,088 @ market $33.60 (87 sellers / qty 2,345); display 694826 Total Sold 3,021 @ market $339.72 (56 sellers / qty 429). Was 5,479 / 2,958 on 2026-10-02. Shots: 2026-10-09-tcgp-*.png",
-      "Amazon live 2026-10-09: box B0HBSNDH6Z 3P BetterShopping4You $39.95, \"1K+ bought in past month\" (was 3K+ on 2026-10-02 \u2014 rolling 30-day badge aged launch week out); display B0HD85WX2J 3P SSA Cards $389.98, \"100+ bought in past month\" (was 200+), New (19) from $389.99. Amazon 1P still 0. Shots: 2026-10-09-amazon-*.png",
-      "Amazon badges are past-month rolling, not lifetime. Day 35 post-street so launch peak left the window; live 1K+/100+ used for model (not inventing higher). Peak observed last week was 3K+/200+.",
-      "Do not annualize; day 35 post-street."
+      "Target 2026-10-16: PDP A-1011726453 \"Item not available\"; search page press-and-hold verification failed twice (10s, 15s holds). No price/badge seen. Carrying last-good 94k+ from 2026-09-25.",
+      "TCGPlayer live 2026-10-16: box 715291 Total Sold 6,496 (3-month snapshot) @ market $32.94, avg daily sold 71, 84 sellers / qty 2,414, low listing $30.00+$2 ship; display 694826 Total Sold 3,074 @ market $284.95 (was $339.72), avg daily sold 33, 62 sellers / qty 448, low $292.80. Was 6,088 / 3,021 on 2026-10-09. Display image shows x10 boxes (consistent with x10 model factor).",
+      "Amazon 2026-10-16: both PDPs returned an AI-agent access ban page (\"Continued access by an unauthorized AI agent violates Amazon's Conditions of Use\"); not clicked through. Carrying last-good 1K+ box / 100+ display from 2026-10-09; Amazon 1P last seen 0.",
+      "TCGPlayer Total Sold is a 3-month snapshot window; still inside 3 months of street (2026-09-04) so it reads as cumulative for now. Watch for roll-off after ~2026-12-04.",
+      "Screenshots captured by browser tool but not retrievable to /workspace/mamo/shots this week.",
+      "Do not annualize; day 42 post-street."
     ]
   },
   "knobs": {
@@ -44,20 +45,20 @@
     "us_share_of_americas": 0.88
   },
   "results": {
-    "tcgplayer_boxes_seen": 36298.0,
+    "tcgplayer_boxes_seen": 37236.0,
     "amazon_marketplace_boxes_seen": 2000.0,
-    "proven_sold": 132298.0,
-    "estimated_sold": 259912.0,
-    "estimated_sold_low": 230993.3333333333,
-    "estimated_sold_high": 300930.0,
-    "estimated_print": 700000,
-    "estimated_print_low": 622000,
-    "estimated_print_high": 810000,
-    "us_print": 616000.0,
-    "estimated_print_online_only": 298898.8,
-    "estimated_print_online_only_low": 265642.3333333333,
-    "estimated_print_online_only_high": 346069.5,
-    "us_print_online_only": 263030.944,
+    "proven_sold": 133236.0,
+    "estimated_sold": 263664.0,
+    "estimated_sold_low": 234120.0,
+    "estimated_sold_high": 305620.0,
+    "estimated_print": 704000,
+    "estimated_print_low": 626000,
+    "estimated_print_high": 815000,
+    "us_print": 619520.0,
+    "estimated_print_online_only": 303213.6,
+    "estimated_print_online_only_low": 269238.0,
+    "estimated_print_online_only_high": 351463.0,
+    "us_print_online_only": 266827.968,
     "print_is_working_headline": true
   },
   "notes": [
@@ -68,7 +69,7 @@
     "GMR bridge uses 42 confirmed Americas serials from serial tracker (60 public total with 18 E).",
     "GMR bridge estimates boxes opened, not sealed sold.",
     "Cross-link: https://mastersquidwardo-blip.github.io/mamo/",
-    "Friday 2026-10-09: Target PDP unavailable (carried 94k+). TCGPlayer Total Sold live 6088/3021. Amazon marketplace rolling badges 1K+/100+ live (down from 3K+/200+ as launch aged out of 30-day window)."
+    "Friday 2026-10-16: TCGPlayer live 6496/3074 (display market fell to $284.95). Target PDP unavailable + search human-check failed (carried 94k+). Amazon blocked AI agents (carried 1K+/100+)."
   ],
   "gmr": {
     "americas_lock": 1800,
@@ -77,28 +78,28 @@
     "implied_pulled_mid": 168.0,
     "off_market_mid": 126.0,
     "boxes_per_gmr_at_450k": 250.0,
-    "boxes_per_gmr_at_print": 388.8888888888889,
-    "implied_boxes_opened_mid": 65319.475878787875,
-    "implied_boxes_opened_low": 40824.67242424242,
-    "implied_boxes_opened_high": 108865.79313131313,
-    "working_print_round": 700000,
+    "boxes_per_gmr_at_print": 391.1111111111111,
+    "implied_boxes_opened_mid": 65722.19054545453,
+    "implied_boxes_opened_low": 41076.36909090909,
+    "implied_boxes_opened_high": 109536.98424242422,
+    "working_print_round": 704000,
     "status": "bridge from confirmed Americas serials",
     "note": "Uses confirmed Americas serial identities from the serial tracker. Bands boxes opened, not boxes sold. Europe E-serials excluded.",
-    "vs_sellthrough_mid_ratio": 0.10733333333333334,
+    "vs_sellthrough_mid_ratio": 0.10733333333333332,
     "disagree_gt_2x": true,
     "weak_side": null,
-    "opened_vs_hidden_sold_fraction": 0.10733333333333334,
-    "cross_check_note": "Implied opens ~65,319 are ~11% of hidden estimated sold ~608,567. That gap is expected this early (most stock still sealed). Not treated as a >2\u00d7 print conflict; do not average GMR into print."
+    "opened_vs_hidden_sold_fraction": 0.10733333333333332,
+    "cross_check_note": "Implied opens ~65,722 are ~11% of hidden estimated sold ~612,319. Opens vs sold, not a print conflict; GMR side is the weak side if read as sell-through (serial register flat at 42 since 2026-09-14). Do not average."
   },
   "serial_tracker": {
     "url": "https://mastersquidwardo-blip.github.io/mamo/",
     "repo": "https://github.com/mastersquidwardo-blip/mamo",
-    "as_of": "2026-10-09",
-    "commit": null,
+    "as_of": "2026-10-16",
+    "commit": "75864ea",
     "confirmed_americas_serials": 42,
     "confirmed_e_serials": 18,
     "confirmed_total": 60,
-    "note": "Counted unique Americas pool rows in serials.csv / data.js (exclude E). Unchanged vs prior 42."
+    "note": "serials.csv: 42 Americas / 18 E-distributed; repo unchanged since 2026-09-14."
   },
   "hidden_channels": {
     "label": "Labeled guesses \u2014 not proven sold",
@@ -144,18 +145,18 @@
     }
   },
   "results_with_hidden": {
-    "estimated_sold": 608566.5454545454,
-    "estimated_print": 699851.5272727272,
-    "note": "Full hidden-door rebuild (~609k sold / ~700k print); headline print rounded to 700,000"
+    "estimated_sold": 612318.5454545454,
+    "estimated_print": 704166.3272727272,
+    "note": "Full hidden-door rebuild (~612k sold / ~704k print); headline rounded to 704,000"
   },
   "working_print": {
-    "americas": 700000,
-    "americas_display": 700000,
+    "americas": 704000,
+    "americas_display": 704000,
     "label": "Hidden-door Americas print (normalized)",
-    "us_approx": 616000.0,
-    "boxes_per_gmr": 388.9,
+    "us_approx": 619520.0,
+    "boxes_per_gmr": 391.1,
     "basis": "Full hidden-door rebuild: Target in-store lift + Walmart/GameStop/Best Buy priors + unsold factor",
-    "americas_exact": 699851.5272727272
+    "americas_exact": 704166.3272727272
   },
   "amazon_live": {
     "box": {
@@ -166,9 +167,9 @@
       "bought_month": "1K+ bought in past month",
       "boxes_point": 1000,
       "other_offers": null,
-      "shot": "/workspace/mamo/shots/2026-10-09-amazon-box.png",
-      "status": "ok",
-      "note": "Rolling 30-day badge; was 3K+ on 2026-10-02"
+      "shot": null,
+      "status": "blocked_carried",
+      "note": "2026-10-16 AI-agent access ban page; carried 2026-10-09 badge"
     },
     "display": {
       "asin": "B0HD85WX2J",
@@ -179,42 +180,44 @@
       "displays_point": 100,
       "boxes_equiv": 1000,
       "other_offers": 19,
-      "shot": "/workspace/mamo/shots/2026-10-09-amazon-display.png",
-      "status": "ok",
-      "note": "Rolling 30-day badge; was 200+ on 2026-10-02"
+      "shot": null,
+      "status": "blocked_carried",
+      "note": "2026-10-16 AI-agent access ban page; carried 2026-10-09 badge"
     }
   },
   "target_live": {
     "url": "https://www.target.com/p/konami-yu-gi-oh-magnificent-monsters-box/-/A-1011726453",
     "price": null,
-    "bought_month": "CARRIED 94k+ bought in last month (last good 2026-09-25; PDP unavailable 2026-10-02 and 2026-10-09)",
+    "bought_month": "CARRIED 94k+ (last good 2026-09-25; PDP unavailable 10-02/10-09/10-16)",
     "boxes_point": 94000,
     "availability": "Item not available / product not found",
-    "shot": "/workspace/mamo/shots/2026-10-09-target.png",
+    "shot": null,
     "status": "pdp_unavailable"
   },
   "tcgplayer_live": {
     "box": {
       "product_id": 715291,
-      "market": 33.6,
-      "lowest": null,
+      "market": 32.94,
+      "lowest": 30.0,
       "listings": null,
-      "sellers": 87,
-      "total_sold": 6088,
-      "quantity": 2345,
-      "shot": "/workspace/mamo/shots/2026-10-09-tcgp-box.png",
-      "status": "ok"
+      "sellers": 84,
+      "total_sold": 6496,
+      "quantity": 2414,
+      "shot": null,
+      "status": "ok",
+      "avg_daily_sold": 71
     },
     "display": {
       "product_id": 694826,
-      "market": 339.72,
-      "lowest": null,
+      "market": 284.95,
+      "lowest": 292.8,
       "listings": null,
-      "sellers": 56,
-      "total_sold": 3021,
-      "quantity": 429,
-      "shot": "/workspace/mamo/shots/2026-10-09-tcgp-display.png",
-      "status": "ok"
+      "sellers": 62,
+      "total_sold": 3074,
+      "quantity": 448,
+      "shot": null,
+      "status": "ok",
+      "avg_daily_sold": 33
     }
   },
   "amazon_peak_footnote": {
