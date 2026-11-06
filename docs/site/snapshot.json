@@ -3,18 +3,18 @@
   "set_code": "MAMO",
   "unit": "tuck box",
   "street_date": "2026-09-04",
-  "snapshot_date": "2026-10-30",
-  "snapshot_local": "2026-10-30 09:25 CDT",
-  "days_since_street": 56,
+  "snapshot_date": "2026-11-06",
+  "snapshot_local": "2026-11-06 09:16 CST",
+  "days_since_street": 63,
   "confidence": "medium",
   "msrp": 34.99,
-  "tcgplayer_box_market": 30.02,
-  "tcgplayer_display_market": 265.18,
+  "tcgplayer_box_market": 29.94,
+  "tcgplayer_display_market": 257.36,
   "inputs": {
     "mass_first_party": 94000,
-    "mass_label": "Target first-party (CARRIED 94k+ last good 2026-09-25; PDP unavailable 10-02 through 10-30)",
-    "tcgplayer_boxes": 6987,
-    "tcgplayer_displays": 3186,
+    "mass_label": "Target first-party (CARRIED 94k+ last good 2026-09-25; PDP unavailable 10-02 through 11-06)",
+    "tcgplayer_boxes": 7276,
+    "tcgplayer_displays": 3225,
     "amazon_marketplace_boxes": 1000,
     "amazon_marketplace_displays": 100,
     "amazon_first_party": 0,
@@ -29,12 +29,13 @@
     "walmart_proven": "blank",
     "gamestop_proven": "blank",
     "notes": [
-      "Target 2026-10-30: PDP A-1011726453 'Item not available', no price/badge; no human check. Search (91 results) shows only 'Yu-Gi-Oh! Magnificent Monsters Box Set' $49.95 (ships Sat Nov 7, 3.3 stars/3 reviews) with a nearby '1k+ bought in last month' badge (was 2k+ on 10-23); attribution unconfirmed, rolling 30-day, marketplace-priced, so it does NOT replace the cumulative 94k+ carry. Human check needed.",
-      "TCGPlayer live 2026-10-30: box 715291 Total Sold 6,987 (3-month) @ market $30.02, avg daily 76, low sale $23.25 / listed median $41.59; product page showed 'No Listings Available' / 0 sellers but the public product API showed 81 sellers / 83 listings, low $25.96 \u2014 treat the page's 0 as a display glitch, human check. Display 694826 Total Sold 3,186 @ market $265.18, avg daily 35, 65 sellers / qty 380, low $259.79. Was 6,755 / 3,135 on 10-23.",
-      "Amazon 2026-10-30: both PDPs returned the AI-agent access ban checkpoint; not clicked through. Carrying 1K+ box / 100+ display from 2026-10-09 (now 3 weeks stale).",
+      "Target 2026-11-06: PDP A-1011726453 'Item not available' / Product not found; no price/badge; no human check. Search (91 results) shows 'Yu-Gi-Oh! Magnificent Monsters Box Set' $49.95 (New at Target, 3.3 stars/3 ratings, ships Tue Nov 17) with NO bought badge this week (last week an adjacent 1k+ badge was unverified; this week 1k+ badges are on other products). Does NOT replace cumulative 94k+ carry. Human check needed if a real Target SKU reappears.",
+      "TCGPlayer live 2026-11-06: box 715291 Total Sold 7,276 (3-month) @ market $29.94, avg daily 79, 93 sellers / qty 1,731, low $30.21 ship-incl; low sale $23.25 / high $59.90 / listed median $39.72. Display 694826 Total Sold 3,225 @ market $257.36, avg daily 35, 59 sellers / qty 310, low $255.99. Was 6,987 / 3,186 on 10-30 (+289 box / +39 display). Shots: 2026-11-06-tcgp-*.png",
+      "Amazon 2026-11-06: both PDPs returned the AI-agent access ban checkpoint; not clicked through (box network; user desktops offline). Carrying 1K+ box / 100+ display from 2026-10-09 (now 4 weeks stale).",
       "Serial tracker unchanged since 2026-09-14 (75864ea): 42 Americas / 18 E.",
       "TCGPlayer Total Sold is a 3-month window; watch for roll-off after ~2026-12-04.",
-      "Do not annualize; day 56 post-street."
+      "Do not annualize; day 63 post-street.",
+      "KR HOME and Karthik work PC offline this run; browsing used the box network."
     ]
   },
   "knobs": {
@@ -45,20 +46,20 @@
     "us_share_of_americas": 0.88
   },
   "results": {
-    "tcgplayer_boxes_seen": 38847.0,
+    "tcgplayer_boxes_seen": 39526.0,
     "amazon_marketplace_boxes_seen": 2000.0,
-    "proven_sold": 134847.0,
-    "estimated_sold": 270108.0,
-    "estimated_sold_low": 239490,
-    "estimated_sold_high": 313675,
-    "estimated_print": 712000,
-    "estimated_print_low": 635000,
-    "estimated_print_high": 825000,
-    "us_print": 626560.0,
-    "estimated_print_online_only": 310624.19999999995,
-    "estimated_print_online_only_low": 275413.5,
-    "estimated_print_online_only_high": 360726.25,
-    "us_print_online_only": 273349.296,
+    "proven_sold": 135526.0,
+    "estimated_sold": 272824.0,
+    "estimated_sold_low": 241753,
+    "estimated_sold_high": 317070,
+    "estimated_print": 715000,
+    "estimated_print_low": 662000,
+    "estimated_print_high": 782000,
+    "us_print": 629200.0,
+    "estimated_print_online_only": 313747.6,
+    "estimated_print_online_only_low": 278016.3333333333,
+    "estimated_print_online_only_high": 364630.5,
+    "us_print_online_only": 276097.888,
     "print_is_working_headline": true
   },
   "notes": [
@@ -69,7 +70,7 @@
     "GMR bridge uses 42 confirmed Americas serials from serial tracker (60 public total with 18 E).",
     "GMR bridge estimates boxes opened, not sealed sold.",
     "Cross-link: https://mastersquidwardo-blip.github.io/mamo/",
-    "Friday 2026-10-30: TCGPlayer live 6987/3186 (box market $30.02, display $265.18). Target PDP unavailable (carried 94k+; search $49.95 'Box Set' near a 1k+ past-month badge, unverified). Amazon blocked AI agents (carried 1K+/100+)."
+    "Friday 2026-11-06: TCGPlayer live 7276/3225 (box market $29.94, display $257.36). Target PDP unavailable (carried 94k+; search $49.95 Box Set with no bought badge). Amazon blocked AI agents (carried 1K+/100+)."
   ],
   "gmr": {
     "americas_lock": 1800,
@@ -78,23 +79,23 @@
     "implied_pulled_mid": 168.0,
     "off_market_mid": 126.0,
     "boxes_per_gmr_at_450k": 250.0,
-    "boxes_per_gmr_at_print": 395.32051515151505,
-    "implied_boxes_opened_mid": 66413.84654545452,
-    "implied_boxes_opened_low": 41508.65409090908,
-    "implied_boxes_opened_high": 110689.74424242422,
-    "working_print_round": 712000,
+    "boxes_per_gmr_at_print": 397.0557373737373,
+    "implied_boxes_opened_mid": 66705.36387878787,
+    "implied_boxes_opened_low": 41690.85242424242,
+    "implied_boxes_opened_high": 111175.60646464645,
+    "working_print_round": 715000,
     "status": "bridge from confirmed Americas serials",
     "note": "Uses confirmed Americas serial identities from the serial tracker. Bands boxes opened, not boxes sold. Europe E-serials excluded.",
-    "vs_sellthrough_mid_ratio": 0.10733333333333331,
+    "vs_sellthrough_mid_ratio": 0.10733333333333334,
     "disagree_gt_2x": true,
     "weak_side": null,
-    "opened_vs_hidden_sold_fraction": 0.10733333333333331,
-    "cross_check_note": "Implied opens ~66,414 are ~11% of hidden estimated sold ~618,763. GMR side is the weak side if read as sell-through (serial register flat at 42 since 2026-09-14). Do not average."
+    "opened_vs_hidden_sold_fraction": 0.10733333333333334,
+    "cross_check_note": "Implied opens ~66,705 are ~11% of hidden estimated sold ~621,479. GMR side is the weak side if read as sell-through (serial register flat at 42 since 2026-09-14). Do not average."
   },
   "serial_tracker": {
     "url": "https://mastersquidwardo-blip.github.io/mamo/",
     "repo": "https://github.com/mastersquidwardo-blip/mamo",
-    "as_of": "2026-10-30",
+    "as_of": "2026-11-06",
     "commit": "75864ea",
     "confirmed_americas_serials": 42,
     "confirmed_e_serials": 18,
@@ -103,7 +104,7 @@
   },
   "hidden_channels": {
     "label": "Labeled guesses \u2014 not proven sold",
-    "target_online": 94000.0,
+    "target_online": 94000,
     "target_total_with_instore": 170909.09090909088,
     "doors": [
       {
@@ -145,18 +146,18 @@
     }
   },
   "results_with_hidden": {
-    "estimated_sold": 618762.5454545454,
-    "estimated_print": 711576.9272727271,
-    "note": "Full hidden-door rebuild (~619k sold / ~712k print); headline rounded to 712,000"
+    "estimated_sold": 621478.5454545454,
+    "estimated_print": 714700.3272727272,
+    "note": "Full hidden-door rebuild (~621k sold / ~715k print); headline rounded to 715,000"
   },
   "working_print": {
-    "americas": 712000,
-    "americas_display": 712000,
+    "americas": 715000,
+    "americas_display": 715000,
     "label": "Hidden-door Americas print (normalized)",
-    "us_approx": 626560.0,
-    "boxes_per_gmr": 395.3,
+    "us_approx": 629200.0,
+    "boxes_per_gmr": 397.1,
     "basis": "Full hidden-door rebuild: Target in-store lift + Walmart/GameStop/Best Buy priors + unsold factor",
-    "americas_exact": 711576.9272727271
+    "americas_exact": 714700.3272727272
   },
   "amazon_live": {
     "box": {
@@ -167,9 +168,9 @@
       "bought_month": "1K+ bought in past month",
       "boxes_point": 1000,
       "other_offers": null,
-      "shot": null,
+      "shot": "/workspace/mamo/shots/2026-11-06-amazon-box.png",
       "status": "blocked_carried",
-      "note": "2026-10-30 AI-agent access ban page; carried 2026-10-09 badge"
+      "note": "2026-11-06 AI-agent access ban page; carried 2026-10-09 badge (4 weeks stale)"
     },
     "display": {
       "asin": "B0HD85WX2J",
@@ -180,54 +181,55 @@
       "displays_point": 100,
       "boxes_equiv": 1000,
       "other_offers": 19,
-      "shot": null,
+      "shot": "/workspace/mamo/shots/2026-11-06-amazon-display.png",
       "status": "blocked_carried",
-      "note": "2026-10-30 AI-agent access ban page; carried 2026-10-09 badge"
+      "note": "2026-11-06 AI-agent access ban page; carried 2026-10-09 badge (4 weeks stale)"
     }
   },
   "target_live": {
     "url": "https://www.target.com/p/konami-yu-gi-oh-magnificent-monsters-box/-/A-1011726453",
     "price": null,
-    "bought_month": "CARRIED 94k+ (last good 2026-09-25; PDP unavailable 10-02 through 10-30)",
+    "bought_month": "CARRIED 94k+ (last good 2026-09-25; PDP unavailable 10-02 through 11-06)",
     "boxes_point": 94000,
     "availability": "Item not available / product not found",
-    "shot": null,
+    "shot": "/workspace/mamo/shots/2026-11-06-target-pdp.png",
     "status": "pdp_unavailable",
     "search_listing": {
       "title": "Yu-Gi-Oh! Magnificent Monsters Box Set",
       "price": 49.95,
-      "badge": "1k+ bought in last month (adjacent; attribution unconfirmed)",
-      "verified": false
+      "badge": "none this week (last week adjacent 1k+ was unverified; 1k+ now on other products)",
+      "verified": false,
+      "shot": "/workspace/mamo/shots/2026-11-06-target-search.png"
     }
   },
   "tcgplayer_live": {
     "box": {
       "product_id": 715291,
-      "market": 30.02,
-      "lowest": 25.96,
-      "listings": 83,
-      "sellers": 81,
-      "total_sold": 6987,
-      "quantity": null,
-      "shot": null,
-      "status": "ok_page_listing_glitch",
-      "avg_daily_sold": 76
+      "market": 29.94,
+      "lowest": 30.21,
+      "listings": 94,
+      "sellers": 93,
+      "total_sold": 7276,
+      "quantity": 1731,
+      "shot": "/workspace/mamo/shots/2026-11-06-tcgp-box.png",
+      "status": "ok",
+      "avg_daily_sold": 79
     },
     "display": {
       "product_id": 694826,
-      "market": 265.18,
-      "lowest": 259.79,
-      "listings": 66,
-      "sellers": 65,
-      "total_sold": 3186,
-      "quantity": 380,
-      "shot": null,
+      "market": 257.36,
+      "lowest": 255.99,
+      "listings": 59,
+      "sellers": 59,
+      "total_sold": 3225,
+      "quantity": 310,
+      "shot": "/workspace/mamo/shots/2026-11-06-tcgp-display.png",
       "status": "ok",
       "avg_daily_sold": 35
     }
   },
   "amazon_peak_footnote": {
-    "note": "Peak observed Amazon past-month badges (2026-10-02): 3K+ box / 200+ display. Live today 1K+/100+. Model uses live. Peak would add ~3k to proven and ~3k to hidden sold (~703k print round).",
+    "note": "Peak observed Amazon past-month badges (2026-10-02): 3K+ box / 200+ display. Carried live point still 1K+/100+ from 2026-10-09 (Amazon blocked since). Model uses carried live. Peak would add ~3k to proven and ~3k to hidden sold.",
     "peak_box": 3000,
     "peak_display": 200
   }
